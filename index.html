@@ -1,0 +1,428 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+<title>Bright Tutor - Home Tutoring in Addis Ababa</title>
+<style>
+/* General Styles */
+body, html {
+  margin:0; padding:0;
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+  line-height: 1.6;
+  color: #333;
+}
+a { text-decoration:none; color: inherit; }
+h2,h3,h4 { margin:0; }
+.container { max-width:1200px; margin:0 auto; padding:0 20px; }
+
+/* Header */
+header {
+  display:flex; justify-content:space-between; align-items:center;
+  background:#fff; color:#000;
+  padding:20px 20px 10px 50px; position:sticky; top:0; z-index:1000;
+  box-shadow:0 2px 5px rgba(0,0,0,0.1); 
+}
+
+.logo-container { display: flex; align items: center; }
+.logo-container { width: 50px; height:50px; margin right:30px; }
+.logo-container { margin:0; font-size: 24px; padding-left: 20; }
+
+header h2 { font-size:24px; font-weight:bold; margin-right: 0px; padding-right: 340px; }
+header nav a { margin-left:20px; font-weight:non-bold; color:#000; }
+.call-us {
+    text-align: center; 
+    margin: 20px;
+}
+.call-btn { background: white; color:black; padding:12px 25px; border-radius:5px;  
+ font-weight: bold;
+  text-decoration: none;
+  display: inline-block;transition: background-color 0.3s ease, transform 0.2s ease; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);   }
+
+  /* Animation */
+  animation: bounce 1.5s infinite;
+}
+
+/* Hover effect */
+.call-btn:hover {
+  background: #f0f0f0;
+  color:black;
+}
+
+/* Up and Down Animation */
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+/* Hero Section */
+.hero {
+  height: 80vh; margin-top: 8px;
+  background: url('https://goingivy.com/wp-content/uploads/2017/08/elementary-school-tutor-1.jpg') no-repeat center center/cover;
+  display: fixed; align-items:center; justify-content: center; text-align: center; color: white;
+  position: relative; background-blend-mode: darken; background-size: cover; 
+}
+
+.body { margin: 0; 
+}
+
+.hero::before {
+  content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8) 
+}
+.hero-content { position:relative; z-index:1; padding: 100px; padding-right: 50px; }
+.hero h2 { font-size: 50px; margin: 0px;  }
+.hero h3 { font-size: 45px; margin: 0px; }
+.hero p { font-size: 25px; margin: 15px; font-weight: non-bold; }
+.book-tutor { text-align: center; margin: 20px; }
+.hero .btn { background: gray; padding: 15px 30px; border-radius: 5px; font-weight: bold; display: inline-block; color: white; margin: 30px; transition: background-color 0.3s ease; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);  }
+
+/* About Section */
+.about {
+  padding:120px 20px 20px 100px;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:10px;
+}
+.about-image { flex:1; min-width:250px; max-width:400px; padding: 10px;}
+.about-image img { width:100%; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.2); }
+.about-text { flex:1;padding: 10px;}
+.about-title { width:100%; font-size:35px; font-weight:bold; text-align:center; margin-bottom:30px; color:#000; }
+.about-symbols { display:flex; justify-content:space-around; margin-top:20px; flex-wrap:wrap; }
+.symbol-item { display:flex; flex-direction:column; align-items:center; gap:8px; }
+.symbol-item i { font-size:36px; color:#0d6efd; }
+.symbol-item span { font-size:14px; font-weight:bold; color:#333; text-align:center; }
+
+/* Services Section */
+.services {
+  padding:60px 20px;
+  background:#f9f9f9;
+  text-align:center;
+}
+.services h2 { color:black; margin-bottom:30px; font-weight:bold; font-size:40px  }
+.services-container { display:flex; flex-wrap:wrap; justify-content:space-between; gap:20px; }
+.service-item { background:#fff; flex:1 1 0; border-radius:10px; padding:20px; box-shadow:0 4px 10px rgba(0,0,0,0.1); text-align:center; display: block; transition: transform 0.3s, box-shadow 0.3s;}
+.service-item:hover { transform: translate(-5px); box-shadow: 0 8px 15px rgba(0,0,0,0.2); }
+.service-item img { width:150pxpx; height:150px; object-fit:cover; border-radius:10px; margin-bottom:10px; }
+.service-item i { font-size:28px; color:black; margin:10px 0; }
+.service-item h3 { color:black; margin-bottom:10px; }
+.service-item p { font-size:14px; color:black; }
+/* Why Choose Us */
+.why-choose { padding:60px 20px; text-align:center; font-size:25px; }
+.why-choose h2 { color:black; margin-bottom:40px; }
+.choose-container { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; }
+.choose-item { background:#fff; flex:1 1 calc(45% - 20px); padding:20px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1); text-align:center; }
+.choose-item:hover {translate(-5px); box-shadow: 0 8px 15px rgba(0,0,0,0.2); }
+.choose-item i { font-size:36px; color:black; margin-bottom:10px; }
+.choose-item h3 { color:black; margin-bottom:10px; }
+.choose-item p { color:black; font-size:14px; }
+/* Testimonial Section */
+.testimonial {
+  padding: 60px 20px;
+  background: #ffffff;
+  text-align: center;
+  margin: 0px;
+}
+
+.testimonial h2 {
+  color: black;
+  margin-bottom: 0px;
+  font-size: 35px;
+  padding-top: 200px 200px 50px 200px;
+}
+
+/* Slider container (visible area) */
+.testimonial-slider {
+  max-width: 200px;
+  margin: 80px;
+  overflow: hidden;
+  position: relative;
+
+}
+
+/* Track (flex container that moves left/right) */
+.testimonial-track {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+}
+
+/* Each testimonial card */
+.testimonial-card {
+  width: 800px;
+  height: 200px;
+  background: #ffffff;
+  padding: 60px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+  text-align: center;
+  opacity: 1;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  margin: 20px 200px 80px 200px;
+}
+
+/* Text inside */
+.testimonial-card p {
+  font-style: italic;
+  color: black;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+/* Name */
+.testimonial-card h4 {
+  color: black;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Mobile */
+@media(max-width:768px){
+  .testimonial-card {
+    padding: 20px;
+  }
+}
+.contact-section {
+    background-image: url("https://cisjax.org/wp-content/uploads/2023/07/Student-Tutoring-Program.jpg");
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    color: white; /* Change text color for better readability */
+    padding: 50px 200px 20 200px; /* Add some padding */
+    text-align: center; /* Center align text */
+    height: 100vh;
+}
+
+.contact-section h2 {
+    font-size: 2em; /* Adjust heading size */
+}
+
+.contact-section form {
+    margin-top: 20px; /* Space between heading and form */
+}
+
+.contact-section input,
+.contact-section textarea {
+    width: 50%; /* Full width inputs */
+    padding: 50px 200px 50px 200px; /* Padding for inputs */
+    margin: 10px 0; /* Margin between inputs */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.contact-section button {
+    background-color: #28a745; /* Button color */
+    color: white; /* Button text color */
+    padding: 10px 15px; /* Padding for button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.contact-section button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Footer */
+footer { background:#fff; color:#333; text-align:center; padding:20px; }
+
+/* Media Queries */
+@media(max-width:768px){
+  .about { flex-direction:column; text-align:center; }
+  .about-image, .about-text { max-width:100%; }
+  .services-container, .choose-container { flex-direction:column; align-items:center; }
+  .testimonial-container { overflow-x:auto; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h2>Bright Tutor</h2>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#why">Why Choose Us</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+    <a href="📞+251 991 212 649" class="call-btn">Call Us Now: 0991212649</a>
+  </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-content">
+    <h2>Bright Tutor</h2>
+    <h3>| ብሩህ አስጠኚዎች |</h3>
+    <p>Home and Online Tutoring in Addis Ababa</p>
+    <p id="typing"></p>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="about" id="about">
+  <div class="about-title">About Bright Tutor</div>
+  <div class="about-image">
+    <img src="https://www.knowatom.com/hs-fs/hubfs/Imported_Blog_Media/AdobeStock_357386865%20(1)-May-29-2024-07-58-40-5096-AM.jpeg?width=690&height=460&name=AdobeStock_357386865%20(1)-May-29-2024-07-58-40-5096-AM.jpeg" alt="student girl studying">
+  </div>
+  <div class="about-text">
+    <p>Bright Tutor is a trusted home and online tutoring service in Addis Ababa, dedicated to helping students succeed academically.We provide personalized tutoring for students from KG to Grade 12 in all subjects, including focused preparation for national exams.
+</p>  
+    <p>ብሩህ አስጠኚዎች ድርጅት በአዲስ አበባ የቤት ለቤት እና ኦንላይን የማስጠናት አገልግሎት የሚሰጥ ድርጅት ሲሆን በመምህራን አና ከዩኒቨርስቲ በጥሩ ዉጤት በተመረቁ ወጣቶች ለሁለት አመታት የተማሪዎችን ውጤት በማሻሻል ብዙ ስራዎችን ሰርተናል.ለብሄራዊ ተፈታኞች ልዩ ትኩረት መስጠታችን  እና ከወላጆች ጋር አንድ ላይ መስራታችን ልዩ ያደርገናል.</p>
+  </div>
+</section>
+<!-- Services Section -->
+<section class="services" id="services">
+  <h2>Our Services</h2>
+   <p>Our services are focused on improving students’ results, confidence, and academic success.<br>
+</p>
+  <div class="services-container">
+    <div class="service-item">
+      <img src="https://www.wearetech.africa/media/k2/items/cache/d3787968271aadf66b69e2f7e02571e2_XL.jpg" alt="">
+      <i>🎓</i>
+      <h3>KG to Grade 12</h3>
+      <p>All subjects for all grades from KG to Grade 12</p>
+       <p>ከKG እስከ 12ተኛ ክፍል ሁሉንም የትምህርት አይነቶች</p>
+    </div>
+    <div class="service-item">
+      <img src="https://www.nannybutler.com/wp-content/uploads/2020/06/private-tutor-london.jpg" alt="">
+      <i>🏠</i>
+      <h3>Home Tutoring</h3>
+      <p>Personalized learning sessions at student’s home</p>
+       <p>የቤት ለቤት የማስጠናት አገልግሎት </p>
+    </div>
+    <div class="service-item">
+      <img src="https://www.1stformationsblog.co.uk/wp-content/uploads/2023/04/Shutterstock_1785485780-2.jpg" alt="">
+      <i>💻</i>
+      <h3>Online Tutoring</h3>
+      <p>Learn from anywhere with virtual lessons</p>
+     <p>የኦንላይን የማስጠናት አገልግሎት </p>
+    </div>
+    <div class="service-item">
+      <img src="https://www.thespark.org.uk/wp-content/uploads/2022/03/exam-stress-man-scaled.jpeg" alt="">
+      <i>📝</i>
+      <h3>Exam Preparation</h3>
+      <p>Help students prepare for school & national exams</p>
+      <p>ለብሄራዊ ተፈታኞች ልዩ ትኩረት እንሰጣለን</p>
+      
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="why-choose" id="why">
+  <h2>Why Choose Us</h2>
+ <p> Expert tutors, personalized learning, and flexible programs designed to help students excel</p>
+  <div class="choose-container">
+    <div class="choose-item"><i>🎓</i><h3>Expert Tutors</h3><p>Professional teachers & university graduates</p></div>
+    <div class="choose-item"><i>📝</i><h3>Focus on National Exams</h3><p>Helping students excel in exams</p></div>
+    <div class="choose-item"><i>🎯</i><h3>All Grades & Subjects</h3><p>Covering KG to Grade 12 with focus on weak areas</p></div>
+    <div class="choose-item"><i>⏰</i><h3>Flexible & Affordable</h3><p>Adaptable schedules with reasonable pricing</p></div>
+  </div>
+</section>
+<!-- Testimonials -->
+<section class="testimonial" id="testimonials">
+  <h2>Testimonials</h2>
+  <p>See how our personalized tutoring has helped students succeed academically.</p>
+  <div class="testimonial-container">
+    <div class="testimonial-card"><p>"My child academic performance and confidence has improved alot.."</p><h4>- Parent, Lebu</h4></div>
+    <div class="testimonial-card"><p>"Thanks to Bright Tutor, I passed my national exams with good results."</p><h4>- Student, Addis Ababa</h4></div>
+  </div>
+</section>
+
+<section class="contact us">
+  <div class="contact-content">
+    <h2>Connect with Bright Tutors</h2>
+    <p>Book a proffestional tutor for your child today!</p>
+      <a href="tel:+251991212649">📞+251 991 212 649</a>
+      <a href="https://t.me/brighthometutors29" target="_blank">@brighthometutors29</a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  &copy; 2026 Bright Tutor. All rights reserved.
+</footer>
+<!-- Typing Script -->
+  <script>
+    const texts = [
+      "National Exam Preparation",
+      "KG-Grade 12 All Subjects",
+      "Home and Online Tutoring",
+      "Experienced Teachers and University Graduates"
+    ];
+
+    let i = 0;
+    let j = 0;
+    let isDeleting = false;
+    const typingSpeed = 100;
+    const deletingSpeed = 50;
+
+    function typeLoop() {
+      const typingElement = document.getElementById("typing");
+      const currentText = texts[i]
+     if(!isDeleting) {
+        typingElement.innerHTML = currentText.substring(0, j+1);
+        j++;
+        if(j === currentText.length) {
+          isDeleting = true;
+          setTimeout(typeLoop, 1000);
+        } else {
+          setTimeout(typeLoop, typingSpeed);
+        }
+      } else {
+        typingElement.innerHTML = currentText.substring(0, j-1);
+        j--;
+        if(j === 0) {
+          isDeleting = false;
+          i = (i + 1) % texts.length;
+          setTimeout(typeLoop, 500);
+        } else {
+          setTimeout(typeLoop, deletingSpeed);
+        }
+      }
+    }
+    typeLoop();
+  </script>
+
+<script>
+let index = 0;
+
+const track = document.querySelector('.testimonial-track');
+const cards = document.querySelectorAll('.testimonial-card');
+const total = cards.length;
+
+function slideTestimonials() {
+  index++;
+
+  if (index >= total) {
+    index = 0; 
+  }
+
+  track.style.transform = "translateX(-" + (index * 100) + "%)";
+}
+
+
+setInterval(slideTestimonials, 3000);
+</script>
+
+<script>
+const track = document.querySelector('.testimonial-track');
+const slides = Array.from(track.children);
+let currentIndex = 0;
+
+function moveSlide() {
+  currentIndex = currentIndex === 0 ? 1 : 0; // toggle between 0 and 1
+  const width = slides[0].getBoundingClientRect().width;
+  track.style.transform = translateX(-${width * currentIndex}px);
+}
+
+// Slide every 4 seconds
+setInterval(moveSlide, 4000);
+</script>
+ 
+</body>
+</html>
