@@ -9,7 +9,7 @@
 /* General Styles */
 body, html {
   margin:0; padding:0;
-  font-family: Arial, sans-serif;
+  font-family: Arial;
   scroll-behavior: smooth;
   line-height: 1.6;
   color: #333;
@@ -60,9 +60,9 @@ header nav a { margin-left:20px; font-weight:non-bold; color:#000; }
 }
 /* Hero Section */
 .hero {
-  height: 80vh; margin-top: 8px;
+  height: 70vh; margin-top: 8px;
   background: url('https://goingivy.com/wp-content/uploads/2017/08/elementary-school-tutor-1.jpg') no-repeat center center/cover;
-  display: fixed; align-items:center; justify-content: center; text-align: center; color: white;
+  display: flex; align-items:center; justify-content: center; text-align: center; color: white;
   position: relative; background-blend-mode: darken; background-size: cover; 
 }
 
@@ -185,6 +185,7 @@ header nav a { margin-left:20px; font-weight:non-bold; color:#000; }
 @media(max-width:768px){
   .testimonial-card {
     padding: 20px;
+    flex-direction:column;
   }
 }
 .contact-section {
